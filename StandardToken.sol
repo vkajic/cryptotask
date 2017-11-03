@@ -1,4 +1,11 @@
-pragma solidity ^0.4.16;
+pragma solidity ^0.4.18;
+
+import "SafeMath.sol";
+import "Ownable.sol";
+import "ERC20Basic.sol";
+import "ERC20.sol";
+import "BasicToken.sol";
+
 
 /**
  * @title Standard ERC20 token
