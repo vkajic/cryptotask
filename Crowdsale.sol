@@ -25,7 +25,7 @@ contract Crowdsale is Ownable {
     uint public icoDuration; //10000;
     uint public presaleEndTime;
     uint public deadline;
-    uint public price = (1 ether)/1000;
+    uint public price = 1000;
     MintableToken public token;
     mapping(address => uint) public balanceOf;
     bool public icoSuccess = false;
@@ -74,10 +74,10 @@ contract Crowdsale is Ownable {
         balanceOf[msg.sender] += amount;
         if(stage==0) {  //presale
             amountRaisedPreSale += amount;
-            token.mint(msg.sender, amount.mul(2) / price);
+            token.mint(msg.sender, amount.mul(2) * price);
         } else {
             amountRaisedICO += amount;
-            token.mint(msg.sender, amount / price);
+            token.mint(msg.sender, amount * price);
         }
         FundTransfer(msg.sender, amount, true);
     }
