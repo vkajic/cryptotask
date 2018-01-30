@@ -43,9 +43,9 @@ contract Ownable {
 contract CryptoTask is Ownable {
    
     uint MAX_UINT32 = 4294967295;
-    uint MIN_TASK_VALUE = 200000000000000000000;
-    uint CLIENT_TIME_TO_DECIDE = 3 days;
-    uint VOTING_PERIOD = 5 days;
+    uint public MIN_TASK_VALUE = 200000000000000000000;
+    uint public CLIENT_TIME_TO_DECIDE = 3 days;
+    uint public VOTING_PERIOD = 5 days;
     /*uint public MIN_TASK_VALUE = 2000000000000000000;
     uint public CLIENT_TIME_TO_DECIDE = 15 minutes;
     uint public VOTING_PERIOD = 15 minutes;*/
