@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1440" height="1327" viewBox="0 0 1440 1327">
+    <defs>
+        <path id="a" d="M0 0h1440v1327H0z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <use fill="#031134" xlink:href="#a"/>
+
+        <path stroke="#5ED170" stroke-width="20.02" d="M293 728.714L318.183 754 363 709" opacity=".1"/>
+        <path stroke="#FFF" stroke-width="28.35" d="M337 372.038L372.976 408 437 344" opacity=".1"/>
+        <path stroke="#5ED170" stroke-width="6.3" d="M569 167.133l8.274 7.867L592 161" opacity=".15"/>
+        <path stroke="#5ED170" stroke-width="6.3" d="M252 1097.133l8.274 7.867L275 1091" opacity=".25"/>
+        <path stroke="#3DA2DD" stroke-width="6.3" d="M1295 707.133l8.274 7.867L1318 701" opacity=".3"/>
+        <path stroke="#FFF" stroke-width="25.2" d="M991 470.971L1023.018 503 1080 446" opacity=".1"/>
+        <path stroke="#5ED170" stroke-width="18.9" d="M26 563.4L50.104 587 93 545" opacity=".08"/>
+        <path stroke="#FFF" stroke-width="18.9" d="M432 971.4l24.104 23.6L499 953" opacity=".08"/>
+        <path stroke="#FFF" stroke-width="18.9" d="M1318 288.4l24.104 23.6L1385 270" opacity=".2"/>
+        <path stroke="#FFF" stroke-width="15.75" d="M633 597.333L653.146 617 689 582" opacity=".1"/>
+        <path stroke="#3DA2DD" stroke-width="15.75" d="M409 87.333L429.146 107 465 72" opacity=".15"/>
+        <path stroke="#3DA2DD" stroke-width="15.75" d="M1036 712.333L1056.146 732 1092 697" opacity=".1"/>
+        <path stroke="#5ED170" stroke-width="15.75" d="M93 1238.333L113.146 1258 149 1223" opacity=".15"/>
+        <path stroke="#5ED170" stroke-width="12.6" d="M160 152.705L175.83 169 204 140" opacity=".1"/>
+        <path stroke="#FFF" stroke-width="12.6" d="M844 188.705L859.83 205 888 176" opacity=".1"/>
+        <path stroke="#FFF" stroke-width="12.6" d="M1042 1089.705l15.83 16.295 28.17-29M537 1158.705L552.83 1175l28.17-29" opacity=".12"/>
+        <path stroke="#3DA2DD" stroke-width="13.86" d="M796 849.02L813.268 867 844 835" opacity=".12"/>
+        <path stroke="#FFF" stroke-width="31.5" d="M1251 1135.105l39.933 39.895 71.067-71" opacity=".15"/>
+    </g>
+</svg>
