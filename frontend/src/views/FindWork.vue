@@ -102,7 +102,7 @@ export default {
     getWork: function()
     {
       var me = this;
-      Api.getWork({loadMore: me.loadMore}, function(data)
+      Api.getWork(me, {loadMore: me.loadMore}, function(data)
       {
         me.data = data.data;
       });

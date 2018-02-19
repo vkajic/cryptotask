@@ -10,9 +10,9 @@
         </div>
         <div class="col-md-9">
           <div class="header-data text-md-right text-lg-right text-xl-right text-center">
-            <p><span>Wallet: {{balance}} CTF</span><span class="normal"> ⎜ </span><span>Allowance: {{allowance}} CTF</span>  <router-link :to="'funds/'+'allowanceInc'">Increase</router-link>
-            / <router-link :to="'funds/'+'allowanceDec'">Decrease</router-link>
-            <span class="normal"> ⎜ </span><span>Stake: {{myStake}} CTF</span>  <router-link :to="'funds/'+'stakeAdd'">Add</router-link> / <router-link :to="'funds/'+'stakeWithdraw'">Withdraw</router-link></p>
+            <p><span>Wallet: {{balance}} CTF</span><span class="normal"> ⎜ </span><span>Allowance: {{allowance}} CTF</span>  <router-link :to="'/funds/'+'allowanceInc'">Increase</router-link>
+            / <router-link :to="'/funds/'+'allowanceDec'">Decrease</router-link>
+            <span class="normal"> ⎜ </span><span>Stake: {{myStake}} CTF</span>  <router-link :to="'/funds/'+'stakeAdd'">Add</router-link> / <router-link :to="'/funds/'+'stakeWithdraw'">Withdraw</router-link></p>
           </div>
         </div>
       </div>
@@ -32,7 +32,7 @@ export default
       balance: 0,
       allowance: 0,
       myStake: 0,
-      totalStake: 0                  
+      totalStake: 0
     };
   },
   created: function()
@@ -45,23 +45,27 @@ export default
     getInitialData: function()
     {
       var me = this;
-      Api.getInitialData({}, function(data)
+      Api.getInitialData(me, {}, function(data)
       {
         me.balance = data.balance;
         me.allowance = data.allowance;
         me.myStake = data.myStake;
-        me.totalStake = data.totalStake;  
-        //console.log(data);                              
-      });  
+        me.totalStake = data.totalStake;
+        //console.log(data);
+      });
     },
     back: function()
     {
       //window.history.back();
-      
+
       //window.location = "/";
-      window.location = "/platformtest/index.html";
-           
-      //location.reload();            
+      //window.location = "/platformtest/index.html";
+      
+      if(window.location.href.indexOf('platformtest') != -1) window.location = "/platformtest/index.html";
+      else if(window.location.href.indexOf('platform') != -1) window.location = "/platform/index.html";
+      else window.location = "/";
+
+      //location.reload();
     }
   }
 }

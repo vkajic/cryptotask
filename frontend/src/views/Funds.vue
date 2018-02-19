@@ -8,10 +8,10 @@
         <h1>Set</h1>
       </div>
       <div class="col-md-2"></div>
-    </div> 
-        
-    <div class="row">  
-      <div class="col-md-12" v-if="type == 'allowanceInc' || type == 'allowanceDec'"> 
+    </div>
+
+    <div class="row">
+      <div class="col-md-12" v-if="type == 'allowanceInc' || type == 'allowanceDec'">
         <div class="block newtask">
             <form v-if="formResponse.error">
 
@@ -45,13 +45,13 @@
             </div>
           </div>
         </div>
-      </div> 
+      </div>
 
-    
+
       <div class="col-md-12" v-if="type == 'stakeAdd' || type == 'stakeWithdraw'">
         <div class="block newtask">
             <form v-if="formResponse.error">
-  
+
               <div class="row">
                 <div class="col-md-12 text-center">
                   <div class="secondary">
@@ -83,9 +83,9 @@
           </div>
         </div>
       </div>
-    
+
   </div>
-    
+
   </div>
 </template>
 
@@ -117,39 +117,42 @@ export default {
     increaseAllowance: function()
     {
       var me = this;
-      Api.increaseAllowance(me.formData, function(val)
+      Api.increaseAllowance(me, me.formData, function(val)
       {
-        
+
       });
     },
     decreaseAllowance: function()
     {
       var me = this;
-      Api.decreaseAllowance(me.formData, function(val)
+      Api.decreaseAllowance(me, me.formData, function(val)
       {
-        
+
       });
     },
     addStake: function()
     {
       var me = this;
-      Api.addStake(me.formData, function(val)
+      Api.addStake(me, me.formData, function(val)
       {
-        
+
       });
     },
     withdrawStake: function()
     {
       var me = this;
-      Api.withdrawStake(me.formData, function(val)
+      Api.withdrawStake(me, me.formData, function(val)
       {
-        
+
       });
     }
   },
   watch:
   {
-
+    '$route.params.type': function (type) {
+      var me = this;
+      me.type = type;
+    }
   },
   computed:
   {

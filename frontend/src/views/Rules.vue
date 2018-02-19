@@ -62,7 +62,7 @@ export default {
     getTask: function()
     {
       var me = this;
-      Api.getTask({id: me.$route.params.id}, function(data)
+      Api.getTask(me, {id: me.$route.params.id}, function(data)
       {
         me.item = data;
       });
@@ -70,7 +70,7 @@ export default {
     submitSolution: function()
     {
       var me = this;
-      Api.submitSolution({id: me.$route.params.id, data: me.formData}, function(val)
+      Api.submitSolution(me, {id: me.$route.params.id, data: me.formData}, function(val)
       {
         console.log(val)
         if(val.error == false) me.formData.solution = '';
@@ -80,7 +80,7 @@ export default {
     applyForJob: function()
     {
       var me = this;
-      Api.applyForJob({id: me.$route.params.id}, function(val)
+      Api.applyForJob(me, {id: me.$route.params.id}, function(val)
       {
         me.formApplyResponse = val;
       });

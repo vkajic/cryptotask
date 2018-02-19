@@ -105,6 +105,7 @@ body { color: @white; font-family: @mainfont; font-size: 17px; font-weight: norm
 
 .ctf { font-size: 16px; font-style: italic; }
 
+.modal-dialog { font-family: @secfont; color: @black; }
 
 h1 { font-family: @secfont; font-size: 56px; font-weight: bold; }
 h2 { font-family: @secfont; font-size: 33px; font-weight: bold; }
@@ -135,7 +136,7 @@ footer { display: block; width: 100%; height: 100px; }
 .block .description { font-family: @trdfont; font-size: 17px; font-weight: normal; font-style: italic; margin-bottom: 40px; }
 .block .submition { font-family: @trdfont; color: @buttongray; font-size: 14px; font-weight: bold; font-style: italic; }
 .block .time { font-size: 18px; font-weight: bold; font-style: normal; text-transform: uppercase; }
-.block .deadline { width: 100%; height: 65px; border-radius: 32.5px; background-color: @buttongray; margin-top: 50px; text-align: center; padding: 3px; font-family: @secfont; font-size: 42px; font-weight: bold; margin-bottom: 15px; }
+.block .deadline { width: 100%; height: 65px; border-radius: 32.5px; background-color: @buttongray; text-align: center; padding: 3px; font-family: @secfont; font-size: 42px; font-weight: bold; margin-bottom: 15px; }
 .block .deadlinedesc { font-family: @trdfont; font-size: 14px; font-weight: bold; font-style: italic; }
 .block .deadlinedesc span { color: @blue; }
 .block .buttons { margin-top: 40px; }
@@ -186,3 +187,18 @@ footer { display: block; width: 100%; height: 100px; }
 .newtask .disclaimer { font-size: 14px; font-weight: bold; font-style: italic; margin-top: 10px; text-transform: none; }
 .newtask .plus { font-size: 40px; margin-top: 20px; color: @green; }
 .newtask .submitrow { margin-top: 30px; }
+
+.path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 2s linear alternate infinite;
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 0  ;
+  }
+  to {
+    stroke-dashoffset: 1000;
+  }
+}

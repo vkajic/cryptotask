@@ -106,7 +106,7 @@ export default {
     getTask: function()
     {
       var me = this;
-      Api.getTask({id: me.$route.params.id}, function(data)
+      Api.getTask(me, {id: me.$route.params.id}, function(data)
       {
         me.item = data;
       });
@@ -114,49 +114,49 @@ export default {
     finalizeTask: function()
     {
       var me = this;
-      Api.finalizeTask({id: me.$route.params.id}, function(val)
+      Api.finalizeTask(me, {id: me.$route.params.id}, function(val)
       {
-        
+
       });
     },
     startDispute: function()
     {
       var me = this;
-      Api.startDispute({id: me.$route.params.id}, function(val)
+      Api.startDispute(me, {id: me.$route.params.id}, function(val)
       {
-        
+
       });
     },
     commitDispute: function()
     {
       var me = this;
-      Api.commitDispute({id: me.$route.params.id}, function(val)
+      Api.commitDispute(me, {id: me.$route.params.id}, function(val)
       {
-        
+
       });
     },
     voteYes: function()
     {
       var me = this;
-      Api.vote({id: me.$route.params.id, vote: 2}, function(val)
+      Api.vote(me, {id: me.$route.params.id, vote: 2}, function(val)
       {
-        
+
       });
     },
     voteNo: function()
     {
       var me = this;
-      Api.vote({id: me.$route.params.id, vote: 1}, function(val)
+      Api.vote(me, {id: me.$route.params.id, vote: 1}, function(val)
       {
-        
+
       });
     },
     revealVote: function()
     {
       var me = this;
-      Api.revealVote({id: me.$route.params.id}, function(val)
+      Api.revealVote(me, {id: me.$route.params.id}, function(val)
       {
-        
+
       });
     }
   },

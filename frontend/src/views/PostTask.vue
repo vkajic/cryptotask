@@ -105,7 +105,7 @@ export default {
     submitJob: function()
     {
       var me = this;
-      Api.submitJob(me.formData, function(val)
+      Api.submitJob(me, me.formData, function(val)
       {
         me.formResponse = val;
       });

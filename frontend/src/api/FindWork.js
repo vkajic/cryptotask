@@ -1,7 +1,7 @@
 import data from '@/api/data.js'
 
 export default {
-  getWork(params, cb)
+  getWork(Vue, params, cb)
   {
     if(params.loadMore)
     {
