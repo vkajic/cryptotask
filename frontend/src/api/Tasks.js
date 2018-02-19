@@ -317,7 +317,7 @@ export default {
     var salt = Web3Utils.randomHex(500).substr(0, 66);
     localStorage.setItem('salt'+(params.id).toString()+web3.eth.accounts[0], salt);
     localStorage.setItem('vote'+(params.id).toString()+web3.eth.accounts[0], params.vote);
-    ct.commitVote(params.id, "0x" + abi.soliditySHA3( [ "bytes32", "uint32" ], [ salt, params.vote ]).toString('hex'), function(error) {} );
+    Vue.$ct.commitVote(params.id, "0x" + abi.soliditySHA3( [ "bytes32", "uint32" ], [ salt, params.vote ]).toString('hex'), function(error) {} );
 
     //return error
     //cb({error: true, notice: 'something went wrong'});
